@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Selecting</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+	<h1>Get Element by tag name.</h1>
+
+	<h2>Get Element by tag name using query selector.</h2>
+
+	<p id="one">Get element by ID</p>
+
+	<p id="two">Get element by ID using query selector</p>
+
+	<p class="three">Get elements by class name</p>
+
+	<p class="four">Get elements by class name using query selector</p>
+
+	<p class="five">Setting style properties.</p>
+
+	<p class="six">Setting style properties at once.</p>
+
+	<p class="seven">Adding a class</p>	
+
+	<script>
+		
+		// alert('Hello World!');
+
+		// Get element by tag name and change color.
+
+		var x = document.getElementsByTagName("h1");
+		for ( var i = 0; i < x.length; i++) {
+			x[i].style.color = "red";
+		};
+
+		// Get Element by tag name using query selector.
+
+		document.querySelector("h2").style.backgroundColor = "pink";
+
+		// Get element by ID
+
+		document.getElementById("one").style.color = "red";
+
+		// Get element by ID using query selector
+
+		document.querySelector("#two").style.backgroundColor = "pink";
+
+		// Get element by class name
+
+		var x = document.getElementsByClassName("three");
+		for ( var i = 0; i < x.length; i++) {
+			x[i].style.color = "red";
+		};
+
+		// Get element by class name using query selector.
+	
+		document.querySelector(".four").style.backgroundColor = "pink";
+
+		// Applying multiple CSS statements to an element.
+
+		var el = document.querySelector(".five");
+
+		el.style.backgroundColor = "pink";
+		el.style.color = "white";
+
+		// Applying multiple CSS statements to an element at once.
+
+		document.querySelector(".six").style.cssText = 
+		'background: pink; color: white;';
+
+		// Adding a class. 
+
+		document.querySelector(".seven").classList.add("foo");
+
+
+	</script>
+
+	
+</body>
+</html>
